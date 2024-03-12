@@ -8,16 +8,16 @@ async function fetchPosts() {
         let html = '';
         for(const datum of data) {
             console.log(datum);
-            // html += `
-            //     <div class="item">
-            //         <p>${datum.title}</p>
-            //         <p>${datum.body}</p>
+            html += `
+                 <div class="item">
+                     <p>${datum.title}</p>
+                   <p>${datum.body}</p>
 
-            //         <button class="tampilkan-komentar" data-id="${datum.id}">Tampilkan Komentar</button>
-            //         <div class="comments" data-id="${datum.id}">
-            //         </div>
-            //     </div>
-            // `;
+                    <button class="tampilkan-komentar" data-id="${datum.id}">Tampilkan Komentar</button>
+                    <div class="comments" data-id="${datum.id}">
+                    </div>
+                </div>
+            `;
         }
         elm.innerHTML = html;
 
