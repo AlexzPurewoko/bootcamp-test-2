@@ -23,7 +23,8 @@ async function fetchPosts() {
 
         document.querySelectorAll('.tampilkan-komentar').forEach((elm) => {
             elm.addEventListener('click', (event) => {
-                fetchComments(dataId, document.querySelector(`div.comments[data-id="${event.target.getAttribute('data-id'}"]`))
+                const dataId = event.target.getAttribute('data-id');
+                fetchComments(dataId, document.querySelector(`div.comments[data-id="${dataId}"]`))
             })
         })
     } catch (error) {
