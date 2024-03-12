@@ -47,7 +47,7 @@ async function fetchComments(id, whichElement) {
         //         <p><b>${datum.email} :</b> ${datum.body}</p>
         //     `;
         // }
-        // whichElement.innerHTML = html;
+        whichElement.innerHTML = html;
     } catch (error) {
         console.error(error);
     }
