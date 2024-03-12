@@ -22,10 +22,10 @@ async function fetchPosts() {
         elm.innerHTML = html;
 
         document.querySelectorAll('.tampilkan-komentar').forEach((elm) => {
-            // elm.addEventListener('click', (event) => {
-            //     const dataId = event.target.getAttribute('data-id');
-            //     fetchComments(dataId, document.querySelector(`div.comments[data-id="${dataId}"]`))
-            // })
+            elm.addEventListener('click', (event) => {
+                const dataId = event.target.getAttribute('data-id');
+                fetchComments(dataId, document.querySelector(`div.comments[data-id="${dataId}"]`))
+            })
         })
     } catch (error) {
         console.error(error);
