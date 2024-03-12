@@ -40,12 +40,12 @@ async function fetchComments(id, whichElement) {
         const data = await response.json();
 
         let html = '';
-        // for(const datum of data) {
-        //     console.log(datum);
-        //     html += `
-        //         <p><b>${datum.email} :</b> ${datum.body}</p>
-        //     `;
-        // }
+        for(const datum of data) {
+            console.log(datum);
+            html += `
+                <p><b>${datum.email} :</b> ${datum.body}</p>
+            `;
+        }
         whichElement.innerHTML = html;
     } catch (error) {
         console.error(error);
